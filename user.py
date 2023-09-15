@@ -1,7 +1,7 @@
-from quickstart import createService
+from quickstart import create_service
 
 
-service = createService()
+service = create_service()
 
 class user:
 

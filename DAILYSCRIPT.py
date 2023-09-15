@@ -1,12 +1,11 @@
-from quickstart import createService
+from quickstart import create_service
 from user import *
 from label import *
 from collections import Counter
 import random
-import json
 
 def generateLabels(query):
-    service = createService()
+    service = create_service()
     list = retrieveMail(query)
     senderList = []
     nameList = []
@@ -45,7 +44,7 @@ def generateLabels(query):
         list = retrieveMail('from: ' + email) #find emails
 
         try:
-            newLabel = label(random.choice(hexList),name).createLabel() #create label
+            label(random.choice(hexList),name).createLabel() #create label
         except:
             print(name + " Already exists")
 
