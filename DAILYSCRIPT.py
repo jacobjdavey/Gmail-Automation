@@ -21,12 +21,11 @@ def generateLabels(query):
             if item['name'] == 'From':
                 msg_from = item['value']
                 senderList.append(msg_from)
-                print(msg_from)
+
     cnt = Counter(senderList)
     occur = 30
     commonSenders = [x for x, y in cnt.items() if y > occur] #find all emails occuring more than 
                                                              #times
-
     for email in commonSenders: #create separate lists for names and emails
         print(email)
         try:
@@ -52,4 +51,4 @@ def generateLabels(query):
         labelMail(labelId, list) #add list of emails to label
 
 
-generateLabels('from: jacob.j.davey@vanderbilt.edu') #test
+generateLabels('in: anywhere') #test
